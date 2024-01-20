@@ -6,13 +6,7 @@
     <title>Chatbot</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Additional styles can go here */
-        #chatbox {
-            height: 500px;
-            overflow-y: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/tutor.css">
 </head>
 <body>
     <div class="container">
@@ -37,27 +31,6 @@
     <!-- Bootstrap and jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <script>
-        // JavaScript functions can go here
-        function sendMessage() {
-            var input = document.getElementById("userInput").value;
-            if (input.trim() !== '') {
-                var chatbox = document.getElementById("chatbox");
-                var userDiv = document.createElement("div");
-                userDiv.innerHTML = "User: " + input;
-                chatbox.appendChild(userDiv);
-
-                // Add Chatbot response logic here
-                var botDiv = document.createElement("div");
-                botDiv.innerHTML = "Chatbot: ..."; // Placeholder for chatbot response
-                chatbox.appendChild(botDiv);
-
-                // Clear input
-                document.getElementById("userInput").value = '';
-            }
-        }
-    </script>
     <script src="assets/tutor.js"></script>
 </body>
 </html>
