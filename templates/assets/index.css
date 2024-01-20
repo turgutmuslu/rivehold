@@ -1,0 +1,163 @@
+body {
+    background-image: url('C:\\Users\\oguz_\\odev\\aaa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #8B0000, #001f3f);
+    padding: 50px;
+    text-align: center;
+    font-family: 'Apple Chancery', cursive;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 65px;
+    line-height: 56px;
+    margin-bottom: 20px;
+}
+
+header h1 span {
+    display: block;
+    font-size: 24px;
+    line-height: 32px;
+    color: #888;
+}
+
+nav {
+    background-color: #5c3d8e;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 26px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+main {
+    padding: 30px;
+}
+
+main section {
+    margin-bottom: 30px;
+}
+
+main h2 {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 20px;
+}
+
+main a {
+    background-color: #5c3d8e;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+main a:hover {
+    background-color: #4a2f6c;
+}
+
+.package {
+    flex: 0 0 calc(30% - 20px);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.package h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.package p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.package a {
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.package a:hover {
+    background-color: #4a2f6c;
+}
+
+.package.yellow {
+    background-color: #57A9F7;
+    color: #333;
+}
+
+.package.blue {
+    background-color: #FAB800;
+    color: #fff;
+}
+
+.package.green {
+    background-color: #42FA01;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@media (min-width: 768px) {
+    main img {
+        float: right;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+}
+
+.bg-gradient-yellow {
+    background: linear-gradient(45deg, #f9d423, #ff4e50);
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(45deg, #36d1dc, #5b86e5);
+}
+
+.bg-gradient-green {
+    background: linear-gradient(45deg, #11998e, #38ef7d);
+}
+
+.rounded-hard {
+    border-radius: 20px; /* Adjust this value as needed */
+}
