@@ -6,7 +6,7 @@
     <title>Chatbot</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/tutor.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tutor.css') }}">
 </head>
 <body>
     <div class="container">
@@ -31,6 +31,6 @@
     <!-- Bootstrap and jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="assets/tutor.js"></script>
+    <script src="{{ url_for('static', filename='tutor.js') }}"></script>
 </body>
 </html>
