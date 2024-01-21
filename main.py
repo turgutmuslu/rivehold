@@ -2,7 +2,7 @@ import openai
 
 
 api_key = ""
-
+#canla ölüme giderim moruk
 
 openai.api_key = api_key
 
