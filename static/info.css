@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000; /* Siyah arka plan */
+    color: #fff; /* Beyaz metin renkleri */
+  }
+   vg{
+  width: 25px;
+   }
+   header {
+      width: 1200px;
+      max-width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 50px 1fr 50px;
+      grid-template-rows: 50px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 100;
+    }
+    header .search svg {
+      width: 25px;
+    }
+    header .logo {
+      font-weight: bold;
+    }
+    
+    header .menu {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-weight: 500;
+    }
+    
+    header .menu li {
+      cursor: pointer; 
+    }
+    header .menu li:hover {
+      color: #fff; 
+    }
+    header .search {
+      cursor: pointer; 
+    }
+  .campaign-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Siyah arka plan */
+  }
+
+  .campaign-box {
+    width: 500px;
+    height: 400px;
+    background-color: #111; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.044);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .campaign-box:hover {
+    transform: scale(1.1);
+  }
+
+  .campaign-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .campaign-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  .campaign-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .campaign-button:hover {
+    background-color: #0056b3;
+  }

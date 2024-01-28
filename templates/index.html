@@ -1,61 +1,129 @@
 <!DOCTYPE html>
-<html lang="tr">
-
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Rivehold - Eğitimdeki kurtarıcınız</title>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
+        <!-- header -->
     <header>
-        <h1>Rivehold<br><span>Eğitimdeki kurtarıcınız, süper kahramanınız...</span></h1>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="tutor.html">Bota git</a>
-                </li>
-            </ul>
+        <div class="logo">RiveHold</div>
+        <ul class="menu">
+            <li><a href ="index.html">Home</a></li>
+            <li><a href ="login.html">Portal login</a></li>
+            <li><a href ="paket.html">Packet</a></li>
+            <li><a href ="chatbox">Demo</li></a>
+        </ul>
+        <div class="search">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
         </div>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>Rivehold</h2>
-            <p> Yapay zekada çocukları hedef alıyoruz. Eğitimi yapay zeka ile birleştiren uygulama.</p>
-        </section>
-        <section id="demo">
-            <h2>Riveholdu Demo</h2>
-            <a href="#" class="btn btn-primary">Riveholdu Demo sürümünü deneyiniz. &raquo;</a>
-        </section>
-        <section id="lessons" class="d-flex justify-content-around">
-            <div class="lesson bg-gradient-blue rounded-hard shadow p-3 mb-5">
-                <h3>Matematik</h3>
-                <p>Açıklama ve detaylar...</p>
-                <a href="#" class="btn btn-light">Detaylı Bilgi</a>
-            </div>
-            <div class="lesson bg-gradient-yellow rounded-hard shadow p-3 mb-5">
-                <h3>Biyoloji</h3>
-                <p>Açıklama ve detaylar...</p>
-                <a href="#" class="btn btn-light">Detaylı Bilgi</a>
-            </div>
-            <div class="lesson bg-gradient-red rounded-hard shadow p-3 mb-5">
-                <h3>İngilizce</h3>
-                <p>Açıklama ve detaylar...</p>
-                <a href="#" class="btn btn-light">Detaylı Bilgi</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Rivehold</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="{{ url_for('static', filename='index.js') }}"></script>
-</body>
+    </header>
 
+    <!-- slider -->
+
+    <div class="slider">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="image/sph5.jpg">
+                <div class="content">
+                    <p>Kendini Gerçekleştirme</p>
+                    <h2>RiveHold ile hayallerinin kahramanı olmaya varmısın?</h2>
+                    <p>
+                        Bırakın çocuklarınız Rivehold sayesinde kendinin süper kahramanı olsun! 
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/sph4.jpg">
+                <div class="content">
+                    <p>Eğlenceli içerikler</p>
+                    <h2>RiveHold'da Eğlenmeye Hazırmısın ? </h2>
+                    <p>
+                        Sıradan Dersler mi Sıkıcı? Rivehold, Canlı Karakterleriyle Öğrenmeyi Eğlenceli Kılıyor!
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/sph3.jpg">
+                <div class="content">
+                    <p>Ücretler</p>
+                    <h2>Rivehold'la Bütçeni Düşün... </h2>
+                    <p>
+                        Öğrenmek Artık Daha Uygun, Rivehold ile Tanışın!
+                        Bütçenizi Düşünün, Rivehold ile Özel Ders Fırsatlarına Sahip Olun!
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/sph2.jpg">
+                <div class="content">
+                    <p>Erişim Kolaylığı</p>
+                    <h2>RiveHold: Bilgiye Hemen Ulaşmaya hazırmısın?</h2>
+                    <p>
+                        Her Yerde Öğrenim Serüveni: RiveHold'un Kolay Erişimiyle Bilgi Her Zaman Yanında!
+                        Bilgiye Katıl, RiveHold Ailesine Büyük Bir Merhaba de!
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/aaa.jpg">
+                <div class="content">
+                    <p>Büyük Bir Aile</p>
+                    <h2>Bu Ailenin Parçası Olmaya hazırmısın?</h2>
+                    <p>
+                        RiveHold Ailesine Katıl, Bilgi Dünyasında Büyük Bir Aileye Adımını At!
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="image/sph5.jpg">
+                <div class="content">
+                    Kendini Gerçekleştirme
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/sph4.jpg">
+                <div class="content">
+                    Eğlenceli içerikler
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/sph3.jpg">
+                <div class="content">
+                    Ücretler
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/sph2.jpg">
+                <div class="content">
+                    Erişim Kolaylığı
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/aaa.jpg">
+                <div class="content">
+                    Büyük Bir Aile
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
 </html>
