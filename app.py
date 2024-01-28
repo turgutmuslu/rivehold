@@ -11,7 +11,7 @@ def index():
 
 @app.route('/chatbox')
 def tutor():
-    return render_template('tutor.html')
+    return render_template('chatbox.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
