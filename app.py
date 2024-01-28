@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, jsonify, request, redirect, url_for
+from api import ask_ai
 
 app = Flask(__name__)
 
@@ -12,6 +13,13 @@ def index():
 @app.route('/chatbox')
 def tutor():
     return render_template('chatbox.html')
+
+@app.route('/ask_ai', methods=['POST'])
+def ask_ai_endpoint():
+    data = request.json
+    question = data['question']
+    response = ask_ai(question)
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)

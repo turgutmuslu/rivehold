@@ -14,19 +14,11 @@ function sendMessage() {
   if (userQuestion !== '') {
     addMessage(userQuestion, 'outgoing');
 
-    // Kullanıcının sorusunu Flask uygulamasına gönder
-    fetch('http://localhost:5000/get-response', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ message: userQuestion }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        // Flask uygulamasından gelen cevabı göster
-        addMessage(data.reply, 'incoming');
-      });
+    // Kullanıcının sorusunu askQuestionToAI fonksiyonu aracılığıyla Flask uygulamasına gönder
+    askQuestionToAI(userQuestion).then(data => {
+      // Flask uygulamasından gelen cevabı göster
+      addMessage(data, 'incoming');
+    });
 
     userInput.value = '';
   }
@@ -50,3 +42,22 @@ function changeBackgroundImage() {
 document.addEventListener('DOMContentLoaded', function () {
   setInterval(changeBackgroundImage, 5000); // 5000 milisaniye (5 saniye) aralıklarla değiştir
 });
+
+// apiyi kullandıracak fonksiyon
+function askQuestionToAI(question) {
+  return fetch('/ask_ai', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ question: question }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log("Alınan Yanıt: ", data); // Yanıtı konsola yazdır
+    return data;
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
