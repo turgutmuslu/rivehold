@@ -1,12 +1,16 @@
-from api import OpenAI
+from openai import OpenAI
 
-api_key = "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"
+api_key = ""
 
 client = OpenAI(
     api_key=api_key,
 )
 
 def ask_ai(question):
+
+    if "anlat" in question:
+        question = "Pretend as a teen education tutor. See me as a kid who is maximum 14 years old. In Turkish, give me a crashcourse about what i will give you just after this sentence. " + question
+
     conversation_history = [
         {"role": "system", "content": "Sen yardımsever bir yapay zeka asistanısın."},
         {"role": "user", "content": question},
