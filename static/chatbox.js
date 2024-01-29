@@ -19,8 +19,6 @@ function sendMessage() {
       // Flask uygulamasından gelen cevabı göster
       addMessage(data, 'incoming');
     });
-
-    userInput.value = '';
   }
 }
 
@@ -44,9 +42,40 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(changeBackgroundImage, 2000); // 5000 milisaniye (5 saniye) aralıklarla değiştir
 });
 
+function askQuestionToAI(question) {
+  return fetch('/ask_ai', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ question: question }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log("Alınan Yanıt: ", data); // Yanıtı konsola yazdır
+    return data;
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
+
 const userInput = document.getElementById('userInput');
 userInput.addEventListener('keyup', function (event) {
   if (event.key === 'Enter') {
     sendMessage();
+    document.getElementById('userInput').value = '';
   }
 });
+
+function playAudio() {
+  // Ses dosyasının yolunu belirtin
+  var audioPath = 'static/rivehold1.mp3';
+
+  // Audio öğesini oluşturun
+  var audio = new Audio(audioPath);
+
+  // Ses dosyasını çal
+  audio.play();
+}
+window.onload = setTimeout(playAudio, 2000);

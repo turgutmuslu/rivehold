@@ -32,6 +32,37 @@ header .menu{
     gap: 20px;
     font-weight: 500;
 }
+
+header .menu li {
+    position: relative;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #eee; /* Link color /
+    transition: color 0.5s;
+}
+
+header .menu a:hover {
+    color: #fff; / Hovered link color /
+}
+
+/ Optional: Add an underline or any other style for better visibility /
+header .menu li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #eee; / Underline color */
+    transition: width 0.3s;
+}
+
+header .menu li:hover::after {
+    width: 100%;
+}
+
 /* css slider */
 .slider{
     height: 100vh;
