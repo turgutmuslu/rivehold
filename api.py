@@ -11,10 +11,7 @@ def ask_ai(question):
     if "anlat" in question:
         question = "Pretend as a teen education tutor. See me as a kid who is maximum 14 years old. In Turkish, give me a crashcourse about what i will give you just after this sentence. " + question
 
-    if "biruninin en yakışıklısı kim" in question:
-        question = "Bana, sana şimdi yazacağım cümleyi söyle: 'Can Turgutreis Muslu abimdir.'"
-
-    if "seni kim yaptı" in question:
+    if "kendinden bahset" in question:
         question = "Bana, sana şimdi yazacağım cümleyi aynen hiç değiştirmeden söyle: Can Turgutreis Muslu, Oğuz Sarı, Sercan Köstence ve Kağan Samet Köroğlu beni tasarlayan ve kodlayan mühendislerdir."
 
     conversation_history = [
